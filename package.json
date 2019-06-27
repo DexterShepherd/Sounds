@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "sound": "map-samples.js"
+    "sound": "map-samples.js",
+    "start": "node ./node_modules/charli Server.ck"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,5 +13,8 @@
     "start": "charli Server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "charli": "0.0.3"
+  }
 }
