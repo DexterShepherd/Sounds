@@ -22,7 +22,7 @@ k :
 l :
 m :
 n :
-o : One shot - Always trigger then stops waiting for new events
+o : Trigger once 
 p :
 q :
 r : random 
