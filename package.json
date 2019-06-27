@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "sound": "map-samples.js",
-    "start": "node ./node_modules/charli Server.ck"
+    "sound": "map-samples.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "map": "node ./bin/map-samples.js",
-    "start": "charli Server.js"
+    "start": "node ./node_modules/charli Server.ck"
   },
   "author": "",
   "license": "ISC",
