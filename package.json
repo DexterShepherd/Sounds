@@ -1,0 +1,16 @@
+{
+  "name": "sound",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "sound": "map-samples.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "map": "node ./bin/map-samples.js",
+    "start": "charli Server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

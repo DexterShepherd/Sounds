@@ -1,0 +1,62 @@
+0 : Probability of Trigger  
+1 : Probability of Trigger
+2 : Probability of Trigger
+3 : Probability of Trigger
+4 : Probability of Trigger
+5 : Probability of Trigger
+6 : Probability of Trigger
+7 : Probability of Trigger
+8 : Probability of Trigger
+9 : Probability of Trigger
+a : Probability of Trigger
+b : Probability of Trigger
+c : Probability of Trigger
+d : Probability of Trigger
+e : Probability of Trigger
+f : Probability of Trigger 
+g :
+h :
+i :
+j :
+k :
+l :
+m :
+n :
+o : One shot - Always trigger then stops waiting for new events
+p :
+q :
+r : random 
+s : stutter(trigger, count)
+t :
+u :
+v :
+w :
+x :
+y :
+z :
+[ : Double Pattern Speed
+] : Half Pattern Speed
+( : Open Arguments
+) : Close Arguments
+{ :
+} :
+. :
+- :
+_ :
+= :
++ :
+- :
+/ :
+* :
+: :
+' :
+; :
+! :
+@ :
+# :
+$ :
+% :
+^ :
+& :
+| : OR
+, :
