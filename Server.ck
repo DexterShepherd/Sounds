@@ -23,7 +23,7 @@ youPitch.start();
 add("dkick:0");
 Pattern kick;
 kick.connect(transport, sounds[1].trigger);
-"{[f[0f]0f]}7{[[fa0f0af0]]}1" => kick.pattern;
+"{[f[0f]0f]}7[[f80f08f8]]" => kick.pattern;
 kick.start();
 
 add("808:1");
@@ -45,8 +45,27 @@ word.start();
 
 Pattern wordPitch;
 wordPitch.connect(transport, sounds[3].note);
-" {(u0){(+1)[f]}4}4{(u0){(+2)[f]}4}4 " => wordPitch.pattern;
+"{(u0){(+1)[f]}4}4{(u0){(+2)[f]}4}4" => wordPitch.pattern;
 wordPitch.start();
+
+
+add("808:3");
+Pattern clap;
+clap.connect(transport, sounds[4].trigger);
+"{[00f[04]]}7[[04][0f]f[[0048]]]" => clap.pattern;
+clap.start();
+
+add("bass1:17");
+Pattern bass;
+bass.connect(transport, sounds[5].trigger);
+"[f]" => bass.pattern;
+bass.start();
+
+Pattern bassPitch;
+bassPitch.connect(transport, sounds[5].note);
+"{(u1){(+1)[f]}4}4{(u1){(+2)[f]}4}4" => bassPitch.pattern;
+bassPitch.start();
+0.5 => sounds[5].s.gain;
 
 fun void add(string s) {
   Sound t; 
