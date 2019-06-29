@@ -14,6 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "charli": "0.0.3"
+    "charli": "0.0.4"
   }
 }

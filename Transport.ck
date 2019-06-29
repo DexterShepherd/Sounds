@@ -7,6 +7,8 @@ public class Transport {
   Playhead quarter;
   Playhead half;
   Playhead bar;
+  Playhead twoBar;
+  Playhead fourBar;
 
   Playhead events[0];
 
@@ -16,6 +18,8 @@ public class Transport {
   events << quarter;
   events << half;
   events << bar;
+  events << twoBar;
+  events << fourBar;
 
   float tps;
   setBpm(120);
@@ -51,6 +55,14 @@ public class Transport {
       if ( tick.count % 32 == 0)  {
         bar.broadcast();
         1 +=> bar.count;
+      }
+      if ( tick.count % 64 == 0)  {
+        twoBar.broadcast();
+        1 +=> twoBar.count;
+      }
+      if ( tick.count % 128 == 0)  {
+        fourBar.broadcast();
+        1 +=> fourBar.count;
       }
       tps::second => now;
     }

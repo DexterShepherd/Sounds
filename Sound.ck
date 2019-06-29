@@ -1,11 +1,16 @@
 // require('samples/index.ck')
+// require('SoundEvent.ck')
+// require('PatternEvent.ck')
 
 public class Sound {
   SndBuf s => dac;
 
   SampleMap samples;
+  SoundEvent control;
+  PatternEvent trigger;
+  PatternEvent note;
 
-  Event trigger;
+  1.0 => float root;
 
   fun void load(string sound) {
     s.read(samples.map[sound]);
@@ -22,5 +27,20 @@ public class Sound {
       trigger => now;
       play();
     }
+  }
+
+  spork ~ controlPoll();
+
+  fun void controlPoll() {
+    while(1) {
+      note => now;
+      rateForNote(note.data) => s.rate;
+    }
+  }
+
+  fun float rateForNote(float n) {
+    n - root => float diff;
+    diff / 12 => float semi;
+    return ( Math.pow(2, semi) );
   }
 }

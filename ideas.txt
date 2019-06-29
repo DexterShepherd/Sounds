@@ -1,19 +1,19 @@
-0 : Probability of Trigger  
-1 : Probability of Trigger
-2 : Probability of Trigger
-3 : Probability of Trigger
-4 : Probability of Trigger
-5 : Probability of Trigger
-6 : Probability of Trigger
-7 : Probability of Trigger
-8 : Probability of Trigger
-9 : Probability of Trigger
-a : Probability of Trigger
-b : Probability of Trigger
-c : Probability of Trigger
-d : Probability of Trigger
-e : Probability of Trigger
-f : Probability of Trigger 
+0 : Probability of Trigger | value 0 - 16  
+1 : Probability of Trigger | value 0 - 16
+2 : Probability of Trigger | value 0 - 16
+3 : Probability of Trigger | value 0 - 16
+4 : Probability of Trigger | value 0 - 16
+5 : Probability of Trigger | value 0 - 16
+6 : Probability of Trigger | value 0 - 16
+7 : Probability of Trigger | value 0 - 16
+8 : Probability of Trigger | value 0 - 16
+9 : Probability of Trigger | value 0 - 16
+a : Probability of Trigger | value 0 - 16
+b : Probability of Trigger | value 0 - 16
+c : Probability of Trigger | value 0 - 16
+d : Probability of Trigger | value 0 - 16
+e : Probability of Trigger | value 0 - 16
+f : Probability of Trigger | value 0 - 16 
 g :
 h :
 i :
@@ -22,11 +22,11 @@ k :
 l :
 m :
 n :
-o : Trigger once 
+o : Trigger once ( oneshot )
 p :
 q :
-r : random 
-s : stutter(trigger, count)
+r : f - random a: min(0) b: max(f) (r37)
+s : f - stutter a: trigger b: count (s3b)
 t :
 u :
 v :
@@ -36,18 +36,18 @@ y :
 z :
 [ : Double Pattern Speed
 ] : Half Pattern Speed
-( : Open Arguments
-) : Close Arguments
+( : Open Function
+) : Close Function 
 { :
 } :
 . :
 - :
 _ :
 = :
-+ :
-- :
-/ :
-* :
++ : f - add to data a: amount (af)
+- : f - sub from data a: amount (sf)
+/ : f - div data
+* : f - mult data
 : :
 ' :
 ; :
