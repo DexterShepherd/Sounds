@@ -17,7 +17,21 @@ public class Pattern {
     if ( temp.find("{") != -1 ) {
       while(temp.find("{") != -1) {
         temp.find("{") => int start; 
-        temp.find("}") => int end;
+        -1 => int end;
+        0 => int openCount;
+        for ( start + 1 => int i; i < temp.length(); i++) {
+          if ( temp.substring(i, 1) == "{" ) {
+            1 +=> openCount;
+          }
+          if ( temp.substring(i, 1) == "}" ) {
+            if ( openCount == 0 )   {
+              i => end;
+              break;
+            } 
+            1 -=> openCount;
+          }
+        }
+        /* temp.find("}") => int end; */
         charToNumber(temp.substring(end + 1, 1)) => int times;
         temp.erase(end, 2);
         temp.erase(start, 1);
@@ -42,6 +56,9 @@ public class Pattern {
   fun void run() {
     transport.bar => now;
     while(true) {
+      while ( !charImplemented(currentChar()) ) {
+        incrementIndex();
+      }
       parseFunction(currentChar());
       updateSpeed(currentChar());
       probTrigger(currentChar());
@@ -51,6 +68,11 @@ public class Pattern {
 
   fun string currentChar() {
     return _pattern.substring(index, 1);
+  }
+
+  fun int charImplemented(string s) {
+    "0123456789abcdef+[]{}u()" => string map;
+    return map.find(s) != -1;
   }
 
   fun void incrementIndex() {
